@@ -15,10 +15,18 @@ public $numeroConta;
 public $saldo = 10000.00;
 
 //craindo construto
-public function _construto()
+public function _construto($banco.$nomeTitular,$numeroAgencia,$numeroConta,$saldo)
 {
 
-echo 'ola , sou construtor'
+// acessar o atributo dentro da classe uso do 'this'
+
+$this ->banco =$banco;
+$this ->nomeTitula =$nomeTitular;
+$this ->numeroAgencia =$numeroAgencia;
+$this ->numeroConta =$numeroConta;
+$this ->saldo =$saldo;
+
+
 
 
 
@@ -42,7 +50,16 @@ return 'ola ,eu sou seu metodo obterSaldo()';
 
 //variavel $conta e uma conta bancaria 
 // uso do 'new' para criação de instancias indica que a variavel recebe o tipo
-$conta = new ContaBancaria();
+$conta = new ContaBancaria(
+
+
+    //valores a atribuir em conta bancaria
+'Banco do Brasil',
+'joe ',
+'8244',
+'55555',
+'3000.00'
+);
 //$conta recebe todo os atributo da contaBancaria
 
 
